@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #3660a1;
+  padding: 0.5rem;
+  height: 100vh;
+}
+
+nav {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #297cff;
+  padding: 0.5rem;
+  padding-right: 0;
+  height: 100%;
+  border-radius: 1rem;
+  box-shadow: 5px 5px 15px #1e59b855;
+  max-width: 5rem;
+  overflow-x: hidden;
+  transition: 0.5s all;
+}
+
+nav.active {
+  width: 100%;
+  max-width: 20em;
+}
+
+nav ion-icon {
+  color: #fff;
+  font-size: 2rem;
+  min-width: 2rem;
+}
+
+nav span {
+  width: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: 1.5s all;
+}
+
+nav span.active {
+  width: 100%;
+  opacity: 1;
+}
+
+nav .logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: bold;
+  height: 5rem;
+  width: 100%;
+  padding: 1rem;
+}
+
+nav .nav-links {
+  flex: 1;
+  width: 100%;
+  list-style: none;
+}
+
+nav .nav-links li {
+  display: flex;
+  justify-content: center;
+}
+
+nav .nav-links a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #fff;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 50px 0 0 50px;
+  text-decoration: none;
+  transition: background-color 1s;
+}
+
+nav .nav-links a:hover {
+  background-color: #fff;
+  color: #3660a1;
+}
+
+nav .nav-links a:hover ion-icon {
+  color: #3660a1;
+}
+
+
+nav .btn-navbar {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s all;
+}
+
+nav .btn-navbar .pipe {
+  width: 1.5rem;
+  height: 0.1rem;
+  background-color: #3660a1;
+}
