@@ -1,15 +1,19 @@
 const btnNavbar = document.querySelector(".btn-navbar");
+const navbarLinks = document.querySelectorAll("nav .nav-links a");
 
 btnNavbar.addEventListener("click", () => {
   const spanList = document.querySelectorAll("nav span");
   const nav = document.querySelector("nav");
-  const btnNavbarIcon = document.querySelector(".btn-navbar ion-icon");
-
   spanList.forEach((span) => {
     span.classList.toggle("active");
   });
   nav.classList.toggle("active");
-  if (btnNavbarIcon.name === "menu-outline") {
-    btnNavbarIcon.name = "close-outline";
-  }
+});
+
+navbarLinks.forEach((aTag) => {
+  aTag.addEventListener("click", () => {
+    const title = document.querySelector("main section h1");
+
+    title.innerHTML = aTag.innerHTML;
+  });
 });
